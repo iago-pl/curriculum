@@ -17,12 +17,18 @@
 
 <body>
     <div class="page" id="page">
-        <button class="print" id="print"><img src="download.svg" alt="Descargar" title="Descargar"></button>
+        <button class="print" id="print">
+            <span>Descargar</span>
+            <img src="download.svg" alt="Descargar" title="Descargar">
+        </button>
         <header>
             <div class="content">
                 <h1>Iago Pena Lorenzo</h1>
                 <h3>Desarrollador IA y Big Data | Desarrollador Web Fullstack</h3>
-                <span>iago.pena.lorenzo@gmail.com</span>
+                <div>
+                    <span class="data" id="mail" title="Click para copiar">iago.pena.lorenzo@gmail.com</span>
+                    <span class="data" id="phone" title="Click para copiar">622671522</span>
+                </div>
                 <a target="_blank" href="https://github.com/iago-pl">https://github.com/iago-pl</a>
             </div>
             <img src="link.svg">
@@ -145,7 +151,7 @@
                         </div>
                         <div class="item">
                             <header>Análisis y Manipulación de Datos</header>
-                            <span>Pandas, Matplotlib, Power BI</span>
+                            <span>Pandas, Power BI, Matplotlib </span>
                         </div>
                         <div class="item">
                             <header>Entrenamiento de Modelos de IA</header>
@@ -249,6 +255,23 @@
         page.dataset.print = false;
         document.body.dataset.print = false;
     });
+
+
+</script>
+<script>
+    const mail = document.getElementById("mail");
+    const phone = document.getElementById("phone");
+
+    async function copyToClipboard(e) {
+        const target = e.target;
+        target.style.setProperty('cursor', 'wait');
+        navigator.clipboard.writeText(target.textContent);
+        await new Promise(r => setTimeout(r, 100));
+        target.style.removeProperty("cursor");
+    }
+    mail.addEventListener("click", copyToClipboard);
+    phone.addEventListener("click", copyToClipboard);
+
 </script>
 
 </html>

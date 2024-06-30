@@ -39,20 +39,30 @@ body[data-print=true] {
 button {
     background-color: transparent;
     border: none;
-    width: 2em;
 
-    & :hover {
+    &:hover {
         cursor: pointer;
         transform: scale(1.1);
     }
 }
 
 .print {
+    font-weight: bold;
     position: fixed;
     top: 1em;
     right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-transform: uppercase;
+
+    /* & span {
+        color: var(--base);
+    } */
 
     & img {
+        width: 2em;
         filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%);
     }
 }
@@ -73,7 +83,19 @@ button {
         & .content {
             display: flex;
             flex-direction: column;
-            gap: 0.125em;
+            gap: 0.5em;
+            width: fit-content;
+
+            & div {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                & .data:hover {
+                    cursor: copy;
+                    color: var(--base);
+                    font-weight: bold;
+                }
+            }
 
             & h1 {
                 font-size: 2.5em;
@@ -84,6 +106,7 @@ button {
                 text-decoration: none;
                 font-style: italic;
                 color: var(--base);
+                width: fit-content;
 
                 &::after {
                     content: url('link.svg');
@@ -178,11 +201,19 @@ article {
             width: 0.75em;
             display: inline-block;
             padding-left: 0.25em;
-            /* filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%); */
         }
 
         &:visited {
             color: var(--black);
+        }
+
+        &:hover {
+            color: var(--base);
+
+            &::after {
+
+                filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%);
+            }
         }
     }
 
