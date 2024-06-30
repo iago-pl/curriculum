@@ -71,7 +71,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    width: 75%;
+    width: 50%;
     background-color: white;
     padding: 2em;
 
@@ -129,6 +129,15 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 2em;
 }
+
+@media only screen and (max-width: 1300px) {
+
+
+    .page {
+        width: 75%;
+    }
+}
+
 
 @media only screen and (max-width: 810px) {
     main {
