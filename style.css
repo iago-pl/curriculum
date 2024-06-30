@@ -12,23 +12,25 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     color: var(--black);
 }
 
 body {
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
 body[data-print=true] {
-    background-color: white;
+    font-size: 14px;
+
+    & .page {
+        width: 90%;
+    }
 }
 
-.page[data-print=true] {
-    width: 90%;
-}
 
 .hide {
     display: none;
@@ -37,17 +39,11 @@ body[data-print=true] {
 button {
     background-color: transparent;
     border: none;
-    appearance: none;
     width: 2em;
-    fill: red;
 
     & :hover {
         cursor: pointer;
         transform: scale(1.1);
-    }
-
-    & img {
-        filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%);
     }
 }
 
@@ -55,30 +51,52 @@ button {
     position: fixed;
     top: 1em;
     right: 1em;
+
+    & img {
+        filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%);
+    }
 }
 
 .page {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    width: 50%;
+    width: 75%;
     background-color: white;
     padding: 2em;
 
     &>header {
         display: grid;
         grid-template-columns: auto min-content;
+        gap: 1em;
 
         & .content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.125em;
 
-            & header {
+            & h1 {
                 font-size: 2.5em;
                 font-weight: bold;
+            }
+
+            & a {
+                text-decoration: none;
+                font-style: italic;
+                color: var(--base);
+
+                &::after {
+                    content: url('link.svg');
+                    width: 0.75em;
+                    display: inline-block;
+                    padding-left: 0.25em;
+                    filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%);
+                }
             }
         }
 
         &>img {
-            width: 150px;
+            width: 100px;
         }
     }
 }
@@ -89,14 +107,31 @@ main {
     gap: 2em;
 }
 
-.column {
+@media only screen and (max-width: 810px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .page {
+        width: 90%;
+    }
+
+    body[data-print=true] {
+        & main {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+
+section {
     display: flex;
     flex-direction: column;
     gap: 2em;
     /* max-width: 22em; */
 }
 
-section {
+article {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -107,6 +142,7 @@ section {
         font-size: 1.25em;
         font-weight: bold;
         color: var(--base);
+        border-bottom: 2px solid var(--base);
     }
 }
 
@@ -142,6 +178,7 @@ section {
             width: 0.75em;
             display: inline-block;
             padding-left: 0.25em;
+            /* filter: invert(34%) sepia(28%) saturate(3477%) hue-rotate(176deg) brightness(98%) contrast(103%); */
         }
 
         &:visited {
