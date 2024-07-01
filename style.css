@@ -34,6 +34,10 @@ body[data-print=true] {
 
 .hide {
     display: none;
+
+    & * {
+        display: none;
+    }
 }
 
 button {
@@ -80,17 +84,17 @@ button {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 2em;
-        height: min-content;
 
         & .content {
             display: flex;
             flex-direction: column;
-            gap: 0.5em;
+            gap: 0.25em;
             width: fit-content;
 
-            & div {
+            & .data-container {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 1em;
 
                 & .data:hover {
                     cursor: copy;
@@ -143,37 +147,10 @@ main {
     gap: 2em;
 }
 
-@media only screen and (max-width: 1300px) {
-
-
-    .page {
-        width: 75%;
-    }
-}
-
-
-@media only screen and (max-width: 810px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-
-    .page {
-        width: 90%;
-    }
-
-    body[data-print=true] {
-        & main {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-}
-
-
 section {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    /* max-width: 22em; */
 }
 
 article {
@@ -256,5 +233,42 @@ article {
         border-radius: 1em;
         background-color: var(--base);
         height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .page {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 796px) {
+    .content {
+        & .data-container {
+            grid-template-columns: 1fr !important;
+            gap: 0.25em !important;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 810px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .page {
+        width: 90%;
+    }
+
+    body[data-print=true] {
+        & main {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .container {
+        gap: 0.75em;
     }
 }
