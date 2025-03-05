@@ -50,6 +50,13 @@ button {
     }
 }
 
+a {
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
 .print {
     font-weight: bold;
     position: fixed;
