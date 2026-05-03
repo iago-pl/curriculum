@@ -1,280 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum</title>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     </style>
-    <link rel="stylesheet" href="style.css">
-    <script src="html2pdf.bundle.min.js"
-        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
-</head>
 
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
     <div class="page" id="page">
-        <button class="print" id="print">
-            <span>Descargar</span>
-            <img src="download.svg" alt="Descargar" title="Descargar">
-        </button>
-        <header>
-            <div class="content">
-                <h1>Iago Pena Lorenzo</h1>
-                <h3>Desarrollador IA y Big Data | Desarrollador Fullstack</h3>
-                <div class="data-container">
-                    <span class="data" id="mail" title="Click para copiar">iago.pena.lorenzo@gmail.com</span>
-                    <span class="data" id="phone" title="Click para copiar">622671522</span>
-                </div>
-                <a target="_blank" href="https://linkedin.com/in/iago-pena">linkedin.com/in/iago-pena</a>
-                <a target="_blank" href="https://github.com/iago-pl">github.com/iago-pl</a>
-            </div>
-            <div class="pfp"></div>
-            <!-- <img src="pfp.png"> -->
-        </header>
-        <main>
-            <section>
-                <article>
-                    <header>Formación Profesional</header>
-                    <div class="container">
-                        <div class="item">
-                            <header>Curso de Especialización en Inteligencia Artificial y Big Data</header>
-                            <span><a target="_blank" href="https://www.edu.xunta.gal/centros/iesteis/">IES
-                                    Teis</a></span>
-                            <span>2023 - 2024</span>
-                        </div>
-                        <div class="item">
-                            <header>Ciclo Superior de Desarrollo de Aplicaciones Web</header>
-                            <span><a target="_blank" href="https://www.edu.xunta.gal/centros/iesteis/">IES
-                                    Teis</a></span>
-                            <span>2021 - 2023</span>
-                        </div>
-                        <div class="item">
-                            <header>Ciclo Superior de Sonido para Audiovisuales y Espectáculos</header>
-                            <span>
-                                <a target="_blank" href="https://cifpaudiovisualvigo.gal/es/">
-                                    CIFP Audiovisual de Vigo
-                                </a>
-                            </span>
-                            <span>2019 - 2021</span>
-                        </div>
-                        <div class="item">
-                            <header>Ciclo Superior de Animación 3D, Videojuegos y Entornos Interactivos</header>
-                            <span>
-                                <a target="_blank" href="https://blog.eisv.es/">
-                                    Escuela de Imagen y Sonido de Vigo (EISV)
-                                </a>
-                            </span>
-                            <span>2017 - 2019</span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <header>Experiencia Profesional</header>
-                    <div class="container">
-                        <div class="item">
-                            <header>Prácticas Web</header>
-                            <span><a target="_blank" href="https://sysproautomation.com/">Syspro Automation</a></span>
-                            <span>04/2023 – 06/2023 | Nigrán</span>
-                        </div>
-                        <div class="item">
-                            <header>Auxiliar Administrativo</header>
-                            <span>
-                                <a target="_blank"
-                                    href="https://xxivigo.sergas.gal/Paxinas/web.aspx?tipo=paxtab&idLista=3&idContido=45&migtab=12%3B45&idioma=es">
-                                    Hospital Nicolás Peña SERGAS
-                                </a>
-                            </span>
-                            <span>07/2021 – 08/2021 | Vigo</span>
-                        </div>
-                        <div class="item">
-                            <header>Prácticas Sonido</header>
-                            <span>
-                                <a target="_blank" href="https://www.plantasonica.com/">
-                                    Estudio Planta Sónica 2
-                                </a>
-                            </span>
-                            <span>04/2021 – 06/2021 | Vigo</span>
-                        </div>
-                        <div class="item">
-                            <header>
-                                Prácticas Animación
-                            </header>
-                            <span>
-                                Gato Studio
-                            </span>
-                            <span>04/2019 – 06/2019 | A Coruña</span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <header>Cursos</header>
-                    <div class="container">
-                        <div class="item">
-                            <header>
-                                Prevención de Riesgos Laborales 45h
-                            </header>
-                            <span>
-                                Xunta de Galicia
-                            </span>
-                            <span>2018</span>
-                        </div>
-                        <div class="item">
-                            <header>
-                                Salud Laboral: Prevención de Riesgos Laborales 165h
-                            </header>
-                            <span>
-                                Universidad Rey Juan Carlos
-                            </span>
-                            <span>2016</span>
-                        </div>
-                        <div class="item">
-                            <header>
-                                Acoso Laboral en el Ámbito Sanitario 200h
-                            </header>
-                            <span>
-                                Universidad Rey Juan Carlos
-                            </span>
-                            <span>2016</span>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <header>Competencias</header>
-                    <div class="container">
-                        <div class="item">
-                            <header>Programación</header>
-                            <span>Python, C#, Java, JavaScript, PHP, SQL</span>
-                        </div>
-                        <div class="item">
-                            <header>Análisis y Manipulación de Datos</header>
-                            <span>Pandas, Power BI, Matplotlib </span>
-                        </div>
-                        <div class="item">
-                            <header>Entrenamiento de Modelos de IA</header>
-                            <span>Sklearn, Keras, Tensorflow, Pytorch</span>
-                        </div>
-                        <div class="item">
-                            <header>Visión Artificial</header>
-                            <span>Open CV</span>
-                        </div>
-                        <div class="item">
-                            <header>Diseño 3D</header>
-                            <span>Cinema 4D, Maya, Blender</span>
-                        </div>
-                        <div class="item">
-                            <header>Diseño 2D</header>
-                            <span>Photoshop, Illustrator</span>
-                        </div>
-                        <div class="item">
-                            <header>Desarrollo para Realidad Virtual</header>
-                            <span>Unity 3D</span>
-                        </div>
-                        <div class="item">
-                            <header>Captación y Diseño Sonoro</header>
-                            <span>FL Studio, Pro Tools</span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <header>Idiomas</header>
-                    <div class="container">
-                        <div class="item horizontal">
-                            <span>Español</span>
-                            <div class="p-bar">
-                                <div style="width: 100%;"></div>
-                            </div>
-                            <span>Inglés</span>
-                            <div class="p-bar">
-                                <div style="width: 75%;"></div>
-                            </div>
-                            <span>Gallego</span>
-                            <div class="p-bar">
-                                <div style="width: 100%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <header>Premios</header>
-                    <div class="container">
-                        <div class="item">
-                            <header>
-                                <a href="https://www.youtube.com/watch?v=jBA3rzaa7xI">Premio al Mejor Diseño de
-                                    Videojuego (Leap of Faith)</a>
-                            </header>
-                            <span>
-                                <a target="_blank"
-                                    href="https://www.farodevigo.es/sociedad/2019/06/17/vigo-situa-sede-gallega-gaming-15661144.html">Faro
-                                    Gaming (Faro de Vigo)
-                                </a></span>
-                            <span>17/06/2019</span>
-                        </div>
-                        <div class="item">
-                            <header>
-                                2nd Premio en Obradoiro Gallego de Robótica
-                            </header>
-                            <span>
-                                <a target="_blank" href="https://www.edu.xunta.gal/centros/iesescolasproval/node/1129">
-                                    Fundación Barrié e IGACIENCIA
-                                </a>
-                            </span>
-                            <span>26/04/2016</span>
-                        </div>
-                    </div>
-                </article>
-            </section>
-        </main>
+      <button class="print" id="print">
+        <span>Descargar</span>
+        <img src="download.svg" />
+      </button>
+
+      <header>
+        <div class="content" id="personal"></div>
+        <div class="pfp"></div>
+      </header>
+
+      <main>
+        <section id="left"></section>
+        <section id="right"></section>
+      </main>
     </div>
-</body>
 
-<script>
-    const printBtn = document.getElementById("print");
-    const page = document.getElementById("page");
-    printBtn.addEventListener("click", async () => {
-        printBtn.classList.add("hide");
-        page.dataset.print = true;
-        document.body.dataset.print = true;
-        window.scrollTo(0, 0);
-        await new Promise(r => setTimeout(r, 200));
+    <script>
+      /* ================= DATA ================= */
+
+      const cv = {
+        personal: {
+          name: 'Iago Pena Lorenzo',
+          role: 'Desarrollador IA y Big Data | Desarrollador Fullstack',
+          email: 'iago.pena.lorenzo@gmail.com',
+          phone: '622671522',
+          linkedin: 'https://linkedin.com/in/iago-pena',
+          github: 'https://github.com/iago-pl'
+        },
+
+        education: [
+          {
+            title:
+              'Curso de Especialización en Inteligencia Artificial y Big Data',
+            place: 'IES Teis',
+            link: 'https://www.edu.xunta.gal/centros/iesteis/',
+            date: '2023 - 2024'
+          },
+          {
+            title: 'Ciclo Superior de Desarrollo de Aplicaciones Web',
+            place: 'IES Teis',
+            link: 'https://www.edu.xunta.gal/centros/iesteis/',
+            date: '2021 - 2023'
+          },
+          {
+            title: 'Ciclo Superior de Sonido para Audiovisuales y Espectáculos',
+            place: 'CIFP Audiovisual de Vigo',
+            link: 'https://cifpaudiovisualvigo.gal/es/',
+            date: '2019 - 2021'
+          },
+          {
+            title:
+              'Ciclo Superior de Animación 3D, Videojuegos y Entornos Interactivos',
+            place: 'EISV',
+            link: 'https://blog.eisv.es/',
+            date: '2017 - 2019'
+          }
+        ],
+
+        experience: [
+          {
+            title: 'Prácticas Web',
+            place: 'Syspro Automation',
+            link: 'https://sysproautomation.com/',
+            date: '04/2023 – 06/2023 | Nigrán'
+          },
+          {
+            title: 'Auxiliar Administrativo',
+            place: 'Hospital Nicolás Peña SERGAS',
+            link: 'https://xxivigo.sergas.gal/',
+            date: '07/2021 – 08/2021 | Vigo'
+          },
+          {
+            title: 'Prácticas Sonido',
+            place: 'Estudio Planta Sónica 2',
+            link: 'https://www.plantasonica.com/',
+            date: '04/2021 – 06/2021 | Vigo'
+          },
+          {
+            title: 'Prácticas Animación',
+            place: 'Gato Studio',
+            date: '04/2019 – 06/2019 | A Coruña'
+          }
+        ],
+
+        courses: [
+          {
+            title: 'Prevención de Riesgos Laborales 45h',
+            place: 'Xunta de Galicia',
+            date: '2018'
+          },
+          {
+            title: 'Salud Laboral: Prevención de Riesgos Laborales 165h',
+            place: 'Universidad Rey Juan Carlos',
+            date: '2016'
+          },
+          {
+            title: 'Acoso Laboral en el Ámbito Sanitario 200h',
+            place: 'Universidad Rey Juan Carlos',
+            date: '2016'
+          }
+        ],
+
+        skills: [
+          {
+            title: 'Programación',
+            value: 'Python, C#, Java, JavaScript, PHP, SQL'
+          },
+          {
+            title: 'Análisis y Manipulación de Datos',
+            value: 'Pandas, Power BI, Matplotlib'
+          },
+          {
+            title: 'Entrenamiento de Modelos de IA',
+            value: 'Sklearn, Keras, Tensorflow, Pytorch'
+          },
+          { title: 'Visión Artificial', value: 'OpenCV' },
+          { title: 'Diseño 3D', value: 'Cinema 4D, Maya, Blender' },
+          { title: 'Diseño 2D', value: 'Photoshop, Illustrator' },
+          { title: 'Desarrollo para Realidad Virtual', value: 'Unity 3D' },
+          { title: 'Captación y Diseño Sonoro', value: 'FL Studio, Pro Tools' }
+        ],
+
+        languages: [
+          { name: 'Español', level: 100 },
+          { name: 'Inglés', level: 75 },
+          { name: 'Gallego', level: 100 }
+        ],
+
+        awards: [
+          {
+            title: 'Premio al Mejor Diseño de Videojuego (Leap of Faith)',
+            place: 'Faro Gaming',
+            link: 'https://www.farodevigo.es/',
+            date: '17/06/2019'
+          },
+          {
+            title: '2º Premio Obradoiro Gallego de Robótica',
+            place: 'Fundación Barrié e IGACIENCIA',
+            link: 'https://www.edu.xunta.gal/',
+            date: '26/04/2016'
+          }
+        ]
+      }
+
+      /* ================= RENDER ================= */
+
+      function createArticle(title, items, special = null) {
+        const article = document.createElement('article')
+
+        const header = document.createElement('header')
+        header.textContent = title
+        article.appendChild(header)
+
+        const container = document.createElement('div')
+        container.className = 'container'
+
+        if (special === 'languages') {
+          const item = document.createElement('div')
+          item.className = 'item horizontal'
+
+          items.forEach(l => {
+            const span = document.createElement('span')
+            span.textContent = l.name
+
+            const bar = document.createElement('div')
+            bar.className = 'p-bar'
+
+            const fill = document.createElement('div')
+            fill.style.width = l.level + '%'
+
+            bar.appendChild(fill)
+            item.append(span, bar)
+          })
+
+          container.appendChild(item)
+        } else {
+          items.forEach(i => {
+            const div = document.createElement('div')
+            div.className = 'item'
+
+            const h = document.createElement('header')
+            h.textContent = i.title
+
+            const s1 = document.createElement('span')
+            if (i.link) {
+              const a = document.createElement('a')
+              a.href = i.link
+              a.target = '_blank'
+              a.textContent = i.place
+              s1.appendChild(a)
+            } else {
+              s1.textContent = i.place || i.value || ''
+            }
+
+            const s2 = document.createElement('span')
+            s2.textContent = i.date || ''
+
+            div.append(h, s1, s2)
+            container.appendChild(div)
+          })
+        }
+
+        article.appendChild(container)
+        return article
+      }
+
+      function render() {
+        // personal
+        const p = document.getElementById('personal')
+        p.innerHTML = `
+    <h1>${cv.personal.name}</h1>
+    <h3>${cv.personal.role}</h3>
+    <div class="data-container">
+      <span class="data" id="mail">${cv.personal.email}</span>
+      <span class="data" id="phone">${cv.personal.phone}</span>
+    </div>
+    <a target="_blank" href="${cv.personal.linkedin}">linkedin</a>
+    <a target="_blank" href="${cv.personal.github}">github</a>
+  `
+
+        const left = document.getElementById('left')
+        left.appendChild(createArticle('Formación Profesional', cv.education))
+        left.appendChild(
+          createArticle('Experiencia Profesional', cv.experience)
+        )
+        left.appendChild(createArticle('Cursos', cv.courses))
+
+        const right = document.getElementById('right')
+        right.appendChild(createArticle('Competencias', cv.skills))
+        right.appendChild(createArticle('Idiomas', cv.languages, 'languages'))
+        right.appendChild(createArticle('Premios', cv.awards))
+      }
+
+      render()
+
+      /* ================= ORIGINAL SCRIPTS ================= */
+
+      const printBtn = document.getElementById('print')
+      const page = document.getElementById('page')
+
+      printBtn.addEventListener('click', async () => {
+        printBtn.classList.add('hide')
+        page.dataset.print = true
+        document.body.dataset.print = true
+        window.scrollTo(0, 0)
+
+        await new Promise(r => setTimeout(r, 200))
+
         let opt = {
-            filename: 'Curriculum_Iago_Pena_Lorenzo.pdf',
-            image: { type: 'jpeg', quality: 1 },
-            html2canvas: {
-                dpi: 192,
-                scale: 4,
-                letterRendering: true,
-                useCORS: true
-            },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-        await html2pdf().from(document.body).set(opt).save();
-        printBtn.classList.remove("hide");
-        page.dataset.print = false;
-        document.body.dataset.print = false;
-    });
+          filename: 'Curriculum_Iago_Pena_Lorenzo.pdf',
+          image: { type: 'jpeg', quality: 1 },
+          html2canvas: { dpi: 192, scale: 4 },
+          jsPDF: { unit: 'mm', format: 'a4' }
+        }
 
+        await html2pdf().from(document.body).set(opt).save()
 
-</script>
-<script>
-    const mail = document.getElementById("mail");
-    const phone = document.getElementById("phone");
+        printBtn.classList.remove('hide')
+        page.dataset.print = false
+        document.body.dataset.print = false
+      })
 
-    async function copyToClipboard(e) {
-        const target = e.target;
-        target.style.setProperty('cursor', 'wait');
-        navigator.clipboard.writeText(target.textContent);
-        await new Promise(r => setTimeout(r, 100));
-        target.style.removeProperty("cursor");
-    }
-    mail.addEventListener("click", copyToClipboard);
-    phone.addEventListener("click", copyToClipboard);
-
-</script>
-
+      document.addEventListener('click', async e => {
+        if (e.target.id === 'mail' || e.target.id === 'phone') {
+          await navigator.clipboard.writeText(e.target.textContent)
+        }
+      })
+    </script>
+  </body>
 </html>
